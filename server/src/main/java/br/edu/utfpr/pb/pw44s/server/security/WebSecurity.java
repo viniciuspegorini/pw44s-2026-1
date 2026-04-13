@@ -67,8 +67,8 @@ public class WebSecurity {
                 .requestMatchers("/error/**").permitAll()
                 //permite que a rota "/h2-console" seja acessada por qualquer requisição mesmo o usuário não estando autenticado
                 .requestMatchers("/h2-console/**").permitAll()
-                .requestMatchers("/products/**").permitAll()
-                .requestMatchers("/categories/**").permitAll()
+                //.requestMatchers("/products/**").permitAll()
+                //.requestMatchers("/categories/**").permitAll()
                 //as demais rotas da aplicação só podem ser acessadas se o usuário estiver autenticado
                 .anyRequest().authenticated()
         );
