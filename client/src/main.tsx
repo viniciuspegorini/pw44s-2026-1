@@ -9,12 +9,15 @@ import { PrimeReactProvider } from "primereact/api";
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css';
 import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from '@/context/AuthContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <PrimeReactProvider>
-        <App />
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </PrimeReactProvider>
     </BrowserRouter>
   </StrictMode>,
