@@ -30,7 +30,39 @@ const TopMenu: React.FC = () => {
 
   const items: MenuItem[] = authenticated
     ? [
-        { label: "Home", icon: "pi pi-home", command: () => navigate("/") },        
+        { label: "Home", icon: "pi pi-home", command: () => navigate("/") },
+        {
+          label: "Categorias",
+          icon: "pi pi-box",
+          items: [
+            {
+              label: "Listar",
+              icon: "pi pi-list",
+              command: () => navigate("/categories"),
+            },
+            {
+              label: "Novo",
+              icon: "pi pi-plus",
+              command: () => navigate("/categories/new"),
+            },           
+          ],
+        },
+        {
+          label: "Produtos",
+          icon: "pi pi-box",
+          items: [
+            {
+              label: "Listar",
+              icon: "pi pi-list",
+              command: () => navigate("/products"),
+            },
+            {
+              label: "Novo",
+              icon: "pi pi-plus",
+              command: () => navigate("/products/new"),
+            },
+          ],
+        },        
       ]
     : [];
 
